@@ -1,0 +1,18 @@
+<style>
+.color-me-in {
+	background: <%= @color %>;
+}
+</style>
+
+<h1>Practice#about</h1>
+
+<div class="color-me-in">
+  <p>The color is <%= @color.upcase %></p>
+</div>
+
+<%= form_tag index_path do %>
+
+    <p><%= text_field_tag :name, nil, placeholder: "What's your name?" %></p>
+    <p><%= submit_tag :submit %></p>
+
+<% end %>
